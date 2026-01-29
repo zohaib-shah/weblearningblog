@@ -6,19 +6,9 @@ permalink: /ci-cd/
 
 # CI/CD Posts
 
-{% assign posts = site.categories.ci-cd %}
-{% if posts.size > 0 %}
-<ul class="post-list">
-  {% for post in posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No posts in this category yet.</p>
-{% endif %}
+{% for post in site.categories.ci-cd %}
+- **[{{ post.title }}]({{ post.url | relative_url }})**  
+  *{{ post.date | date: "%B %d, %Y" }}*
+{% endfor %}
 
-<p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+[← Back to Home]({{ '/' | relative_url }})
