@@ -1,8 +1,8 @@
 theme: jekyll-theme-cayman
 title: Web Learning Blog
 description: A blog about web development, programming, and technology
-baseurl: "/weblearningblog"
-url: "https://zohaib-shah.github.io"
+baseurl: ""
+url: "https://weblearningblog.com"
 
 # Build settings
 markdown: kramdown
