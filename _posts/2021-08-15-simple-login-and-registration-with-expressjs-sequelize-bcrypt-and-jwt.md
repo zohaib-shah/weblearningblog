@@ -2,7 +2,7 @@
 layout: post
 title: "Simple Login and Registration with ExpressJS, Sequelize, bcrypt and JWT"
 date: 2021-08-15
-categories: [JavaScript]
+categories: [NodeJS]
 tags: [javascript, express, sequelize]
 ---
 

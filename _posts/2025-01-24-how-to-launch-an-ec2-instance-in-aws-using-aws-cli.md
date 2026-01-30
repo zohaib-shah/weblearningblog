@@ -2,7 +2,7 @@
 layout: post
 title: "How to Launch an EC2 Instance in AWS Using AWS CLI"
 date: 2025-01-24
-categories: [AWS, DevOps, Cloud Computing]
+categories: [AWS]
 tags: [aws-cli, ec2, nginx, ubuntu, cloud]
 author: Zohaib
 

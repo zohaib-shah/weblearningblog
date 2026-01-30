@@ -2,7 +2,7 @@
 layout: post
 title: "How to build REST API with Django REST Framework"
 date: 2021-01-29
-categories: [Django, Python]
+categories: [Django]
 tags: [django, python]
 ---
 

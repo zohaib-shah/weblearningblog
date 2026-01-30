@@ -2,7 +2,7 @@
 layout: post
 title: "Seeding data in MySQL table using Sequelize and faker.js in NodeJS"
 date: 2021-07-25
-categories: [JavaScript, Node.js, MySQL]
+categories: [NodeJS]
 tags: [javascript, nodejs, mysql, sequelize]
 ---
 

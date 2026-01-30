@@ -2,7 +2,7 @@
 layout: post
 title: "AngularJS ng-repeat"
 date: 2018-01-27
-categories: [JavaScript, Angular]
+categories: [AngularJS]
 tags: [javascript, angular]
 ---
 

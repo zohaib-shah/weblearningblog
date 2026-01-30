@@ -2,7 +2,7 @@
 layout: post
 title: "How to use Redis as Cache for MongoDB queries in NodeJS"
 date: 2021-02-02
-categories: [JavaScript, Node.js, Database]
+categories: [NodeJS]
 tags: [javascript, nodejs, database, redis, mongodb]
 ---
 

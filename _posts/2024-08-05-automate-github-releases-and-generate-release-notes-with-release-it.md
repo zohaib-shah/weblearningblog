@@ -2,7 +2,7 @@
 layout: post
 title: "Automate GitHub releases and generate release notes with release-it"
 date: 2024-08-05
-categories: [Web Development]
+categories: [CI-CD]
 tags: [github]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to check if Django is installed on Windows"
 date: 2020-06-13
-categories: [Django, Python]
+categories: [Django]
 tags: [django, python]
 ---
 

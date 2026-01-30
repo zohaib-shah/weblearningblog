@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript map, reduce and filter"
 date: 2022-12-23
-categories: [JavaScript]
+categories: [NodeJS]
 tags: [javascript]
 ---
 

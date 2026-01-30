@@ -2,7 +2,7 @@
 layout: post
 title: "Running a NodeJS app with Typescript and ExpressJS in Docker Container"
 date: 2022-06-29
-categories: [JavaScript, TypeScript, Node.js, Docker]
+categories: [NodeJS]
 tags: [javascript, typescript, nodejs, express, docker]
 ---
 

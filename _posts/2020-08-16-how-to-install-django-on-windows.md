@@ -2,7 +2,7 @@
 layout: post
 title: "How to Install Django on Windows"
 date: 2020-08-16
-categories: [Django, Python]
+categories: [Django]
 tags: [django, python]
 ---
 

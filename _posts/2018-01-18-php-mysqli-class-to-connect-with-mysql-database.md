@@ -2,7 +2,7 @@
 layout: post
 title: "PHP mysqli Class to Connect with MySQL Database"
 date: 2018-01-18
-categories: [PHP, MySQL, Database]
+categories: [PHP]
 tags: [php, mysqli, mysql, database, web-development]
 ---
 

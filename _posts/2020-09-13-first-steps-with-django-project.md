@@ -2,7 +2,7 @@
 layout: post
 title: "First Steps with Django Project"
 date: 2020-09-13
-categories: [Django, Python]
+categories: [Django]
 tags: [django, python]
 ---
 

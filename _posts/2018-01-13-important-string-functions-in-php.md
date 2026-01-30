@@ -2,7 +2,7 @@
 layout: post
 title: "Important String Functions in PHP"
 date: 2018-01-13
-categories: [PHP, Programming]
+categories: [PHP]
 tags: [php, string-functions, web-development]
 ---
 

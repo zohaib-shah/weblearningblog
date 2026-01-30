@@ -2,7 +2,7 @@
 layout: post
 title: "How to use Sequelize with Node and Express"
 date: 2021-06-06
-categories: [Node.js]
+categories: [NodeJS]
 tags: [nodejs, express, sequelize]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Connecting Django App with MySql database on Windows"
 date: 2020-09-07
-categories: [Django, Python, MySQL, Database]
+categories: [Django]
 tags: [django, python, mysql, database]
 ---
 
