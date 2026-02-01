@@ -117,12 +117,12 @@ If we are creating or modifying tables using schema builder, we have to use the 
 
 Let's analyze the table creation code below:
 
-
+```php
 Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
-
+```
 
 This minimum table structure has id,created_at and updated_at fields. If we want to have more columns we can just modify this code according to the schema builder rules. `$table->increments('id');` means that we will be having an id field which would have auto increment and primary key features. `$table->timestamps();` ensures that we will be having two timestamp fields `created_at` and `updated_at`
 
@@ -147,36 +147,36 @@ We want to add a column price in our products table. We need to create another m
 
 The newly created migration file has `up()` method as shown below:
 
-
+```php
 public function up()
 {
     Schema::table('products', function (Blueprint $table) {
             //
         });
 }
-
+```
 
 Just add one line `$table->float('price');` so that the `up()` method should look like as follows:
 
-
+```php
 public function up()
     {
         Schema::table('products', function (Blueprint $table) {
             $table->float('price');
         });
     }
-
+```
 
 Ideally, anything we are doing in `up()` method, we should reverse it in `down()` mehtod. Here, we are adding a column "price" in `up()` method so we should drop this column in `down()` method. This way, if the migration is rolled back the column "price" would be deleted. The `down()` method should look like below:
 
-
+```php
 public function down()
     {
         Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('price');
         });
     }
-
+```
 
 Having migration file ready with "price" column addition code, we should run `php artisan migrate`. Just check the table, It should have price column added.
 

@@ -75,6 +75,7 @@ Go ahead and open config.json file from config directory. Modify the content of 
 The sequelize's way of creating a table is generating a migration and run it. Type npx sequelize-cli model:generate --name User --attributes first_name:string,last_name:string,email:string,password:string
 . This will create a User model and it's migration as well. You can verify the presence of migration file in the migrations directory.
 
+```javascript
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize)=>{
@@ -111,7 +112,7 @@ module.exports = {
     await queryInterface.dropTable('Users');
   }
 };
-
+```
 
 Now run `npx sequelize-cli db:migrate` command. If you don't already had the database created, You need to run `npx sequelize-cli db:create` before running the db:migrate. Once migrated, you should see the Users table in your mysql database.
 
@@ -131,7 +132,7 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
-
+```
 
 This router.get method will be called whenever a get request is received on http://127.0.0.1:3000/users.
 
@@ -141,7 +142,7 @@ In any REST API, if we need to add a resource, we should be posting to the resou
 
 Let's add a router.post method in user.js file. This method will pick input from post data and create a user.
 
-
+```javascript
 var express = require('express');
 var router = express.Router();
 const Models = require('./../models');
@@ -172,7 +173,7 @@ router.post('/', async(req, res, next)=>{
 });
 
 module.exports = router;
-
+```
 
 Here, we are using bcrypt as our password hashing mechanism. Follow [this](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/" target="_blank" rel="noreferrer noopener nofollow) link for a detailed explanation of bcrypt.
 
@@ -185,7 +186,7 @@ Here, we are using bcrypt as our password hashing mechanism. Follow [this](https
 
 Login function will expect user's email and password. On successful password match, it will return a JWT token.
 
-
+```javascript
 router.post('/login',async(req,res,next)=>{
  const user = await User.findOne({ where : {email : req.body.email }});
  if(user){
@@ -202,7 +203,7 @@ router.post('/login',async(req,res,next)=>{
   }
 
   });
-
+```
 
 First off, We are retrieving the user based on the provided email id. `.findOne()` is a sequelize model function which will fetch the first record matching the criteria. In our case, we are finding the record against user's email address.
 
@@ -236,6 +237,7 @@ Ideally, each callback should either send the response or call the next function
 
 Go ahead and create a /users/me route in routes/users.js.
 
+```javascript
 router.get('/me',
  async(req,res,next)=>{
   try {
@@ -254,13 +256,13 @@ router.get('/me',
     }
     res.status(200).json(user);
  });
-
+```
 
 In the first callback function .i.e. middleware, we are checking if the authorization header is available in the request. The authorization header sent in following format:
 
-
+```
 Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWJsZWFybmluZ2Jsb2dAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6IlpvaGFpYiIsImlhdCI6MTYyODk3NjAzNX0.heV5Hb4noCxFXQ4J0F2EbFph46PFm1-oGMAdqOFYawo
-
+```
 
 The actual JWT is after `Bearer `, so we used `.split()` function and get it's last index.
 

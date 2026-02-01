@@ -20,7 +20,7 @@ To add more columns to existing table in Sequelize, we need to create another mi
 
 We now have new migration file created under migrations directory. Go ahead and change this file as follows:
 
-
+```javascript
 'use strict';
 
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
     await queryInterface.removeColumn('Users','city');
   }
 };
-
+```
 
 It should be noted here that the first argument of the removeColumn and addColumn function is the name of the table and not of Model. Now run `npx sequelize-cli db:migrate`, and you should have the Users table as below:
 
@@ -66,7 +66,7 @@ It should be noted here that the first argument of the removeColumn and addColum
 
 In order to seed the data, we will run `npx sequelize-cli seed:generate --name add-users` command. The seed file should now appear in seeders directory. Open the seed file and change it's content as follows:
 
-
+```javascript
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -88,7 +88,7 @@ module.exports = {
      await queryInterface.bulkDelete('Users', null, {});
   }
 };
-
+```
 
 Again, the first parameter of queryInterface's bulkInsert method is the name of the table in MySQL db, Don't confuse it with model name.
 

@@ -80,6 +80,7 @@ In the above code, the `"student"` object passed to `capitalizeStudent()` functi
 Let's explore another code example for pass by reference in javascript. This time, we will pass an array to a function:
 
 
+```javascript
 const studentNames = [
     {
         first: 'John',
@@ -92,6 +93,20 @@ const studentNames = [
 ];
 
 const capitalizeNames = (names) => {
-    for(let i = 0; i
+    for(let i = 0; i < names.length; i++){
+        names[i].first = names[i].first.toUpperCase();
+        names[i].last = names[i].last.toUpperCase();
+    }
+};
 
+capitalizeNames(studentNames);
+console.log(studentNames);
+
+// Output
+// [
+//   { first: 'JOHN', last: 'DOE' },
+//   { first: 'FOO', last: 'BAR' }
+// ]
 ```
+
+In this example, we passed an array of objects to the `capitalizeNames()` function and modified the properties of each object. Since arrays are passed by reference, the original `studentNames` array was modified.
