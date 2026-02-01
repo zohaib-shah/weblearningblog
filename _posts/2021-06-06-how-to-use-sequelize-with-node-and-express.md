@@ -23,26 +23,18 @@ Inside the application directory, now run `npx express-generator`
 
 The application directory will now look like this. This is a well known project structure for any express framework based web application.
 
-
 While still in the root of project directory, run `npm install` to install all the packages listed in package.json file.
 
-
+```
 ├── app.js
-
 ├── bin
-
 ├── node_modules
-
 ├── package.json
-
 ├── package-lock.json
-
 ├── public
-
 ├── routes
-
 └── views
-
+```
 
 ### 2- Installing Sequelize ORM
 
@@ -64,33 +56,22 @@ Run `npm install --save-dev sequelize-cli` to install CLI package. Note that we 
 
 We will now use sequelize-cli to convert our project structure to use Sequelize features. `npx sequelize-cli init` command will automatically create some folders.
 
-
 The project directory should now look as below:
 
+```
 ├── app.js
-
 ├── bin
-
 ├── config
-
 ├── migrations
-
 ├── models
-
 ├── node_modules
-
 ├── package.json
-
 ├── package-lock.json
-
 ├── public
-
 ├── routes
-
 ├── seeders
-
 └── views
-
+```
 
 Note that the `npx sequelize-cli init` command has added config, migrations, models and seeders directories.
 

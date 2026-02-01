@@ -25,7 +25,6 @@ Go ahead and create a new directory with `mkdir docker-express-ts-boilerplate &&
 
 Install express framework by running `npm i express --save`. Now create a file `app.js` with following contents:
 
-
 ```javascript
 const express = require('express');
 const app = express();
@@ -35,11 +34,11 @@ app.get('/',(req, res, next) => {
 app.listen(3000,() => {
     console.log("Server started on port 3000");
 });
-
+```
 
 Now open pacakge.json file and add the start script as shown below on line # 8:
 
-
+```json
 {
   "name": "docker-express-ts-boilerplate",
   "version": "1.0.0",
@@ -56,7 +55,7 @@ Now open pacakge.json file and add the start script as shown below on line # 8:
     "express": "^4.18.1"
   }
 }
-
+```
 
 Run `npm start` should start the server now on port 3000. Visit localhost:3000 to verify that the root route is responding.
 
