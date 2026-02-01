@@ -50,15 +50,4 @@ permalink: /django/
 {% endfor %}
 </ul>
 
-<h2 class="section-title">Recent Posts</h2>
-
-<ul class="post-list">
-{% for post in site.posts limit:5 %}
-  <li class="post-item">
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <div class="post-meta">{{ post.date | date: "%B %d, %Y" }} • {{ post.categories | join: ", " }}</div>
-  </li>
-{% endfor %}
-</ul>
-
 [← Back to Home]({{ '/' | relative_url }})

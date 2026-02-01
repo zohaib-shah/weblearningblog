@@ -106,10 +106,10 @@ title: Web Learning Blog
   <p>Tutorials on Web Development, Programming & Technology</p>
 </div>
 
-<h2>Recent Posts</h2>
+<h2>All Posts</h2>
 
 <div class="post-grid">
-{% for post in site.posts limit:10 %}
+{% for post in site.posts %}
   <article class="post-card">
     <h3 class="post-card-title">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
