@@ -52,18 +52,18 @@ We have the project setup now. We now have to configure MySQL with django applic
 
 Find and comment the below code block in your settings.py file:
 
-
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+```
 
 Now add the below code block to tell Django that you will indeed use MySQL and not SQLite.
 
-
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -71,15 +71,17 @@ DATABASES = {
         'USER': 'your_database_user',
         'PASSWORD': 'your_database_password',
         'PORT': '3306',
-'HOST': 'your_database_host'
+        'HOST': 'your_database_host'
     }
 }
-
+```
 
 At this point, we have installed mysqlclient and configured the database information in settings.py file. We will now run the migration, which will create and populate all the tables in the database automatically. Following two commands will run the migration:
-`py manage.py makemigrations`
-`py manage.py migrate`
 
+```bash
+py manage.py makemigrations
+py manage.py migrate
+```
 
 It should be noted here that we should always be inside the project folder (in command prompt) to run any of the manage.py commands.
 

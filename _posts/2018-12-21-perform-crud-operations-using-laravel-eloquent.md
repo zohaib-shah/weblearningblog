@@ -39,6 +39,8 @@ We will create a table articles using migration. Go ahead and type following com
 `php artisan make:migration article --table articles --create articles`
 
 A new migration file has been created in migrations directory with following code:
+
+```php
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -68,10 +70,13 @@ class Articles extends Migration
         Schema::dropIfExists('articles');
     }
 }
+```
 
-You can learn more about migrations [here](http://weblearningblog.com/laravel/use-laravel-database-migrations/" target="_blank" rel="noopener noreferrer)
+You can learn more about migrations [here](http://weblearningblog.com/laravel/use-laravel-database-migrations/).
 
 As you can see, only id and timestamps fields are included in this migration file. We will add more columns by editing this file as below:
+
+```php
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -105,9 +110,9 @@ class Articles extends Migration
         Schema::dropIfExists('articles');
     }
 }
+```
 
 Now run `php artisan migrate` to create the table in the database.
-
 
 ## Creating Eloquent Model for MySQL table
 
@@ -133,14 +138,14 @@ Remember, you need to add the `use App\Article;` at the beginning of your contro
 
 Inserting records using eloquent is as simple as creating an object of eloquent model, populate its properties which are identical to the name of the table columns. Finally, calling the `save()` method of this object.
 
-
+```php
 $article = new Article;
     	$article->title = 'My First Article';
     	$article->content = 'Hello, This is my first post.';
     	$article->rating = 7;
     	$article->author = 'Zohaib';
     	$article->save();
-
+```
 
 While the above method looks very simple, we have another simpler way to insert data in the table using one line of code which is called "Mass assignment". Before we discuss mass assignment, it is important to know about fillable and guarded properties of eloquent models.
 

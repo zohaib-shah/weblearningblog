@@ -48,7 +48,7 @@ Now create a django project with `django-admin` utility using `django-admin star
 
 Don't forget to add 'rest_framework' and 'app' in INSTALLED_APPS list in `api/settings.py` file.
 
-
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'app'
 ]
-
+```
 
 ## Configuring MySQL database with application
 
@@ -69,6 +69,7 @@ INSTALLED_APPS = [
 
 Now replace `DATABASES` dict with following code in your `api/settings.py` file.
 
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -78,21 +79,20 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-
+```
 
 You can now run migrations with following code:
 
-
-`python3 manage.py makemigrations`
- `python3 manage.py migrate`
-
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Setting up Models and Relations
 
-
 We will create three models (tables) .i.e. Product, Category and Tag. Each category will have multiple products (One to Many). Every product can have multiple tags and every tag may also be associated with multiple products (Many to Many). Add following code in `app/models.py` file:
 
-
+```python
 from django.db import models
 class Category(models.Model):
 	title = models.CharField(max_length=200)
