@@ -19,6 +19,7 @@ Create a fresh angular app using `ng new bootstrap-template`. When prompted, sel
 
 Also, select "CSS" as stylesheet format of your app. Once the angular app is created, we should see following files and directories created for us:
 
+```
 ├── angular.json
 ├── karma.conf.js
 ├── node_modules
@@ -38,14 +39,14 @@ Also, select "CSS" as stylesheet format of your app. Once the angular app is cre
 ├── tsconfig.app.json
 ├── tsconfig.json
 └── tsconfig.spec.json
-
+```
 
 `index.html` inside `src` directory is the starting point of our angular app. The app-root element in index.html file gets replaced with the content of the app component. In fact, app component is the parent component of all the components we are going to create.
 
 
 The app component is already available when we create a new angular project using ng-cli. The reason why app-root element is replaced with the rendered app component is the code below, note that the selector is 'app-root' in app.component.ts file.
 
-
+```typescript
 import { Component } from '@angular/core';
 
 @Component({
@@ -56,7 +57,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bootstrap-template';
 }
-
+```
 
 ## 2- Setting up Bootstrap library with Angular
 
@@ -68,7 +69,7 @@ We need to add both these files globally in our app. We can add it directly into
 
 Given below, is the content of `angular.json` file:
 
-
+```json
 {
   ....,
           "options": {
@@ -91,7 +92,7 @@ Given below, is the content of `angular.json` file:
           },
           ...
 }
-
+```
 
 Here, we are only seeing `projects.architect.build.options` node of the complete JSON. Scripts and styles defined here becomes globally accessible in the app.
 
@@ -110,18 +111,19 @@ Now run `npm start` to check if bootstrap Alert renders as expected.
 
 Download and extract the bootstrap template mentioned previously. Let's have a look at its content below:
 
+```
 ├── about.html
 ├── assets
-│------------ ├── favicon.ico
-│------------ └── img
+│   ├── favicon.ico
+│   └── img
 ├── contact.html
 ├── css
-│------------ └── styles.css
+│   └── styles.css
 ├── index.html
 ├── js
-│------------ └── scripts.js
+│   └── scripts.js
 └── post.html
-
+```
 
 Open `index.html` file. It should look like as below:
 
@@ -206,26 +208,31 @@ Go back to app.component.html file and cut the html of header section.
 
 Now, place this html in `/src/app/header/header.component.html` file. Doing so, we have extracted header's html from app.component.html and added it in Header component. As app component is like a parent component of all newly added components, we need to place the Header component's selector as a replacement of actual header's html.
 
-
-................
-
+```html
+<app-header></app-header>
+<!-- ... rest of content ... -->
+```
 
 ### 5.2- The Post Component
 
 
 Again, copy the post html from app.component.html to /src/app/post/post.component.html.
 
+```html
+<div class="post-preview">
+    <a href="post.html">
+        <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
+        <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+    </a>
+    <p class="post-meta">
+        Posted by
+        <a href="#!">Start Bootstrap</a>
+        on September 24, 2022
+    </p>
+</div>
+```
 
-                            Man must explore, and this is exploration at its greatest
-                            Problems look mighty small from 150 miles up
-
-
-                            Posted by
-                            [Start Bootstrap](#!)
-                            on September 24, 2022
-
-
-As we have a list of posts in the bootstrap template, we would like to iterate over some list of posts and render our post component for each iteration. For now, just keep one post and remove the rest of them from template. As done previously, replace the post html with the post component selector ``.
+As we have a list of posts in the bootstrap template, we would like to iterate over some list of posts and render our post component for each iteration. For now, just keep one post and remove the rest of them from template. As done previously, replace the post html with the post component selector `<app-post></app-post>`.
 
 
 ### 5.3- The Footer Component
@@ -233,14 +240,35 @@ As we have a list of posts in the bootstrap template, we would like to iterate o
 
 Finally, identify footer html in app.component.html and place it in `/src/app/footer/footer.component.html`.
 
+```html
+<footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="small text-center text-muted fst-italic">Copyright © Your Website 2022</div>
+            </div>
+        </div>
+    </div>
+</footer>
+```
 
-                Copyright © Your Website 2022
+Adding the footer selector `<app-footer></app-footer>` in `app.component.html`, we will complete the "angularization" of our bootstrap template. The content of the `app.component.html` file should look like as below.
 
-
-Adding the footer selector `` in `app.component.html`, we will complete the "angularization" of our bootstrap template. The content of the `app.component.html` file should look like as below.
-
-
-                    Older Posts →
+```html
+<app-header></app-header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <app-post></app-post>
+            <hr class="my-4" />
+            <div class="d-flex justify-content-end mb-4">
+                <a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+```
 
 
 ### 5.4- Adding some life to post component
@@ -251,7 +279,7 @@ We need to have a model class for 'Post'. We also need to have a list of these p
 
 Let's first create a directory `/src/models`. Create a model class 'Post' as follows:
 
-
+```typescript
 export class Post {
     constructor(
         public title:string,
@@ -263,14 +291,14 @@ export class Post {
 
     }
 }
-
+```
 
 To learn more about typescript classes, read [this](http://weblearningblog.com/typescript/working-with-classes-in-typescript/" target="_blank" rel="noopener) post.
 
 
 Now in our app.component.ts file, import the 'Post' model and create a list of its objects as mentioned below:
 
-
+```typescript
 import { Component } from '@angular/core';
 import { Post } from 'src/models/post.model';
 @Component({
@@ -301,11 +329,11 @@ export class AppComponent {
   ];
   title = 'bootstrap-template';
 }
-
+```
 
 We can see that post component relies on title,description,author and createdAt attributes. We would like to enable post component to take these attributes from the parent component. To enable an angular component to accept input from the parent component, angular provides us with `@Input()` decorator.
 
-
+```typescript
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -324,18 +352,33 @@ export class PostComponent implements OnInit {
   }
 
 }
-
+```
 
 Now, we can render the post component for each of our post object from app component as follows:
 
-
-                    Older Posts →
-
+```html
+<app-header></app-header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <app-post *ngFor="let post of posts" 
+                      [title]="post.title" 
+                      [description]="post.description" 
+                      [author]="post.author" 
+                      [createdAt]="post.createdAt">
+            </app-post>
+            <hr class="my-4" />
+            <div class="d-flex justify-content-end mb-4">
+                <a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+```
 
 The `*ngFor` directive is responsible of repeating the "Post" component for each post.
 
-
 Running the app now should give you a perfectly rendered page similar to index.html page of downloaded bootstrap template.
-
 
 This post should serve as step by step guide to convert a bootstrap template to angular. Github repository for this blog post is available [here](https://github.com/zohaib-shah/bootstrap-angular-conversion" target="_blank" rel="noopener).
