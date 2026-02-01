@@ -17,35 +17,34 @@ For the sake of simplicity, we will write all code in one ts file. You only need
 
 Let's first create a ts file named `classes.ts`, we will write a simple class `Person` with some properties.
 
+```typescript
 class Person {
     firstName: string;
     lastName: string;
     age: number;
 }
-
+```
 
 Here, `firstName` and `lastName` are two properties. With typescript, we can define or restrict the type of value to be assigned. In this case, `firstName` and `lastName` can only be assigned string values.
 
-
-string, number and boolean are primitive types available in typescript. More on types are on [this](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html" target="_blank" rel="noopener) link.
-
+string, number and boolean are primitive types available in typescript. More on types are on [this](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) link.
 
 We can now instantiate this class and create as many objects as required.
 
+```typescript
 const person = new Person();
 person.firstName = 'John';
 person.lastName = 'Doe';
 console.log(person);
-
+```
 
 To run this code, we will first compile the ts file into js with `npx tsc classes.ts`. Doing so, we should have a `classes.js` file. Now, we can execute classes.js with `node classes.js` command.
 
-
 ## Adding constructor to typescript class:
-
 
 So far, `Person` class is without a constructor. We can add one as follows:
 
+```typescript
 class Person {
     firstName: string;
     lastName: string;
@@ -57,48 +56,46 @@ class Person {
         this.age = age;
     }
 }
-
+```
 
 A method named 'constructor' in a typescript class runs whenever an object of a class is created. Parameters defined for the constructor method, must be supplied at the time of instantiation.
 
-
 In this case, the constructor takes `fName`, `lName` and `age` as parameters and initialize relevant properties.
-
 
 Let's have a look at the instantiation below:
 
+```typescript
 const person = new Person('John', 'Doe', 22);
 console.log(person);
+```
 
+Compiling and running the script now, should output this on console:
 
-Compiling and running the script now, should output this on console
-
-
+```
 Person { firstName: 'John', lastName: 'Doe', age: 22 }
-
+```
 
 ## Declaring and initializing properties within typescript constructor:
 
 
 While above class looks more readable, there is a shorthand to declare and initialize the class properties within the class constructor. The class definition below is equivalent to the one defined earlier.
 
-
+```typescript
 class Person {
 
     constructor(public firstName: string, public lastName: string, public age: number){
 
     }
 }
-
+```
 
 Please note, we now have an empty constructor body but it still do the job of assigning values to the class properties.
 
-
 ## Adding a method to typescript class:
-
 
 A function inside a class is called its method. In `Person` class, we might want to add a method which concatenates first name and last name and returns full name.
 
+```typescript
 class Person {
     constructor(public firstName: string, public lastName: string, public age: number){}
 
@@ -108,10 +105,9 @@ class Person {
 }
 const person = new Person('John', 'Doe', 22);
 console.log(person.fullName());
-
+```
 
 Compiling and running the script now should log 'John Doe' to the console.
-
 
 ## Inheriting a class in typescript:
 
@@ -121,6 +117,7 @@ In a real world application, `Person` class will have varying implementations. A
 
 For distinguished attributes and behaviors, we should define classes which extends the parent class and consist of the specific properties which are only relevant to this class. Let's see how we create child classes in typescript or inherit a parent class.
 
+```typescript
 class Person {
     constructor(public firstName: string, public lastName: string, public age: number){}
 
@@ -140,7 +137,7 @@ class Customer extends Person {
     }
 
 }
-
+```
 
 The child class must call `super()` in its constructor to supply parameters to the parent class.
 
@@ -153,7 +150,8 @@ In the `Customer` class, the property `orderIds` is being declared using constru
 
 Since `orderIds` is only relevant to customer class, we need to have some methods in customer class to add and delete customer orders.
 
-    addOrderId(orderId: number): true | false {
+```typescript
+addOrderId(orderId: number): true | false {
         this.orderIds.push(orderId);
         return true;
     }
@@ -166,22 +164,23 @@ Since `orderIds` is only relevant to customer class, we need to have some method
 
 Let's see how we can create an object of customer class and add orders to it:
 
+```typescript
 const customer = new Customer('John','Doe',33);
 customer.addOrderId(1245);
 customer.addOrderId(1235);
 console.log(customer);
-
+```
 
 Running the code now should log something as following to the console:
 
-
+```
 Customer {
   firstName: 'John',
   lastName: 'Doe',
   age: 33,
   orderIds: [ 1245, 1235 ]
 }
-
+```
 
 ## Access modifiers in a typescript class:
 

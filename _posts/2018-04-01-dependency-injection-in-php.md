@@ -14,13 +14,20 @@ Let's explore a very simple example of How dependency injection helps us write a
 
 ## Code without dependency injection in PHP
 
+```php
+<?php
+class User
+{
+	public $name;
+	public $age;
 
-name = $n;
+	function __construct($n , $a)
+	{
+		$this->name = $n;
 		$this->age = $a;
 	}
 }
 
-```php
 class Greet
 {
 	public $User;
@@ -28,24 +35,29 @@ class Greet
 	function __construct($n , $a)
 	{
 		$this->User = new User($n , $a);
-		echo "Hello".$this->User->name."
- You are ".$this->User->age." Years Old";
+		echo "Hello ".$this->User->name."<br/> You are ".$this->User->age." Years Old";
 	}
 }
 $g = new Greet("Zohaib",31);
 ?>
-
+```
 
 The code above, uses no dependency injection as you can see, Greet class is creating an object of User class inside it's constructor. In such case, Greet class is tightly coupled with User class. Not all, but many changes in User class can cause Greet class to stop working. If we change access modifier of $name property in User class to private, Our code will end up in errors.
 
-
 ## Code with dependency injection in PHP
-
 
 Let's change this code to have dependency injection.
 
+```php
+<?php
+class User
+{
+	public $name;
+	public $age;
 
-name = $n;
+	function __construct($n , $a)
+	{
+		$this->name = $n;
 		$this->age = $a;
 	}
 }
@@ -53,14 +65,14 @@ class Greet
 {
 	public function __construct(User $u)
 	{
-		echo "Hello $u->name
- You are $u->age years old";
+		echo "Hello $u->name<br/> You are $u->age years old";
 	}
 }
 
 $u = new User("Zohaib",31);
 $g = new Greet($u);
-
+?>
+```
 
 Instead of initializing User class in Greet class, we are creating an object of User class outside and supplying this object to Greet class constructor. This way, the dependency on User class is being injected in Greet class.
 
