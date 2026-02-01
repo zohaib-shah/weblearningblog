@@ -70,14 +70,16 @@ var StudentSchema = new mongoose.Schema({
 var Student = mongoose.model('Student', StudentSchema);
 
 module.exports = Student;
-
+```
 
 ## Creating Views
 
 
 We will only have two views .i.e. `student.jade` and `edit_student.jade`.
 
-student.jade
+**student.jade**
+
+```jade
 extends layout
 block content
 	h1 Student Form
@@ -115,9 +117,11 @@ block content
 					td #{st.age}
 					td
 						a(href="/edit-student/"+st.id) Edit
+```
 
+**edit_student.jade**
 
-edit_student.jade
+```jade
 extends layout
 block content
 	h1 Edit Student Form (Picked from #{source})
@@ -138,7 +142,7 @@ block content
 				input(type='number' name='age' value=st.age)
 			p
 				input(type='submit' value='Edit Student')
-
+```
 
 Add both files in `views` directory.
 

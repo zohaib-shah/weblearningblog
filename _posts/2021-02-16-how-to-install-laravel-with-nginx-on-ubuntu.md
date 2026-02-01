@@ -50,25 +50,29 @@ Verify that all the modules are installed by running `php -m`
 
 As NPM is for NodeJS and PIP is for Python, PHP has it's dependency manager in the shape of [Composer](https://getcomposer.org" target="_blank" rel="noreferrer noopener nofollow). Install Composer on Ubuntu with following simple steps:
 
-
-`sudo apt install curl``curl -sS https://getcomposer.org/installer | php``sudo mv composer.phar /usr/local/bin/composer`
-
+```bash
+sudo apt install curl
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+```
 
 ### Add Laravel installer through composer
 
 
 Let's add laravel installer through composer.
 
+```bash
 composer global require laravel/installer
-
+```
 
 Laravel installer is now available to use, but possibly Ubuntu shell doesn't know the directory to execute laravel installer from.
 
 
 To make Ubuntu recognize laravel installer, add composer's system-wide vendor bin directory to the PATH variable.
 
+```bash
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
+```
 
 It is important to note here that the location of composer's vendor bin directory is different for each operating system (My one is Ubuntu 20.04)
 
@@ -98,11 +102,13 @@ As we have a fresh install of NGINX on Ubuntu the conf.d directory is empty.
 
 To serve laravel app through NGINX, let's create a simple NGINX conf file for laravel app inside `/etc/nginx/conf.d`. You can name this file anything but it should end with `.conf` extension. NGINX will automatically pick every file stored in `/etc/nginx/conf.d` directory. This is because of following line placed in `/etc/nginx/nginx.conf`
 
+```nginx
 include /etc/nginx/conf.d/*.conf;
-
+```
 
 I have picked the simple laravel nginx conf file from laravel's official deployment page.
 
+```nginx
 server {
     listen 80;
     server_name 127.0.0.1;
@@ -135,22 +141,25 @@ server {
         deny all;
     }
 }
-
+```
 
 The only line you need to change is `root /home/zohaib/websites/first-laravel-app/public;`
 
 
 I am on localhost and therefore have server_name directive set to 127.0.0.1. Usually, the server_name directive should have your original domain name. The server_name directive tells nginx to use the current nginx file if the requested server name matches the server_name directive. server_name directive could look like below for live environment:
 
+```nginx
 server_name www.yourdomain.com yourdomain.com;
+```
 
 You can validate nginx configurations with `sudo nginx -t`. Make sure that NGINX and PHP-FPM services are running with `sudo systemctl status nginx` and `sudo systemctl status php7.4-fpm` respectively.
 
 
 Now, open `127.0.0.1` in your browser and you should see Laravel welcome page. If you see any permissions error on storage directory, change the root directory permissions as below:
 
+```bash
 sudo chown -R www-data:www-data /home/zohaib/websites/first-laravel-app
-
+```
 
 ### Conclusion
 
