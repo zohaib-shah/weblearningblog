@@ -25,7 +25,6 @@ In PHP, or in any other programming language if we keep writing the code without
 
 A class is heart of object oriented programming. A class is basically a blueprint or a recipe which can be used to produce many instances of a class .i.e objects. Variables defined inside a class are considered as "Properties of a class", while functions specified within a class is referred to as "Methods of a class". Following is the syntax of a very basic class definition.
 
-
 ```php
 class Book
 {
@@ -38,27 +37,23 @@ public function __construct($t = "",$p = 0)
  $this->price = $p;
 }
 }
-
+```
 
 In this code, we are creating a Book class with two properties .i.e. $title and $price. We are also defining a constructor method which is taking two parameters and assigning them to both properties $title and $price respectively.
 
-
 ## Object in OOP
-
 
 An object is an instance of a class, different objects of same class may possess different characteristics, they may contain different values for a property. Given below is the code to create two objects of "Book" class.
 
-
+```php
 $mybook = new Book("My PHP Book",49.5);
 $yourbook = new Book("Your PHP Book",60);
 echo $mybook->title;//echo "My PHP Book"
-echo "
-";
+echo "<br/>";
 echo $yourbook->title;//echo "Your PHP Book"
-
+```
 
 We create an object by using new keyword of PHP. Notice that we are supplying two parameters while creating the object, first is a string for book title and second is double for book price. The order of these parameters and their data type should be same as defined in constructor of the class.
-
 
 ## What is Encapsulation ?
 
@@ -77,7 +72,7 @@ A class can be extended from another class and act as a child to that class. Chi
 
 If we have one parent class "Product" and two sub-classes "Laptop" and "Shirt", Take a look at the code below:
 
-
+```php
 class Product
 {
 	public $title = "";
@@ -102,11 +97,10 @@ class Laptop extends Product
 }
 $s = new Shirt("Formal Shirt",100);
 $l = new Laptop("Dell Laptop",99);
-echo "Shirt title is ".$s->title;//echi Shirt title is Formal Shirt
-echo "
-";
+echo "Shirt title is ".$s->title;//echo Shirt title is Formal Shirt
+echo "<br/>";
 echo "Laptop title is ".$l->title; //echo Laptop title is Dell Laptop
-
+```
 
 We are creating two objects, one from "Shirt" class and other from "Laptop" class. We know that Laptop and Shirt are two distinct entities, but we can classify them as "Product", therefore we created a parent class "Product" and add two properties to that class .i.e. "title" and "price".
 
