@@ -8,7 +8,6 @@ author: Zohaib
 
 ---
 
-# How to Launch an EC2 Instance in AWS Using AWS CLI
 In this comprehensive guide, we'll explore how to launch an EC2 instance using the AWS CLI. By the end of this tutorial, you'll have an Ubuntu-based EC2 instance running with Nginx installed via user data.
 
 ## Overview
