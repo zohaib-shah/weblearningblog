@@ -41,7 +41,7 @@ permalink: /php/
 # PHP Posts
 
 <ul class="post-list">
-{% for post in site.categories.php %}
+{% for post in site.categories.PHP %}
   <li class="post-item">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>

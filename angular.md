@@ -41,7 +41,7 @@ permalink: /angular/
 # Angular Posts
 
 <ul class="post-list">
-{% for post in site.categories.angular %}
+{% for post in site.categories.Angular %}
   <li class="post-item">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
