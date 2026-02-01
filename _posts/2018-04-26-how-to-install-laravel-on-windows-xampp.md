@@ -6,7 +6,6 @@ categories: [Laravel]
 tags: [laravel]
 ---
 
-# How to Install Laravel on Windows Xampp
 In this post, we will learn how to install laravel on windows xampp. Laravel is a popular PHP framework and as it is based on PHP, we need to have PHP configured on our web server. By web server, I mean any computer with Apache, PHP and MySQL installed.
 
 

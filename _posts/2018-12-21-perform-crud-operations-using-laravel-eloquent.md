@@ -6,7 +6,6 @@ categories: [Laravel]
 tags: [laravel]
 ---
 
-# Perform CRUD Operations using Laravel Eloquent
 In this post we will learn about how to perform CRUD Operations using Laravel Eloquent. Eloquent is the laravel way to talk to the database.
 
 In upcoming posts, we will learn Eloquent in more depth, But this post will only focus on single table operations.

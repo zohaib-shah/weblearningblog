@@ -6,8 +6,6 @@ categories: [PHP]
 tags: [php, mysqli, mysql, database, web-development]
 ---
 
-# PHP mysqli Class to Connect with MySQL Database
-
 PHP mysqli class is one of the multiple ways to connect with MySQL database using PHP. In this post we will learn about PHP mysqli class, its useful methods and properties.
 
 Following logical steps will show you how to use mysqli class to access MySQL database in PHP:

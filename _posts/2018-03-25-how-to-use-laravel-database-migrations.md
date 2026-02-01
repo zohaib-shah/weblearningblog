@@ -6,7 +6,6 @@ categories: [Laravel, Database]
 tags: [laravel, database]
 ---
 
-# How to use Laravel Database Migrations
 Laravel database migrations are useful for performing database operations without going deep into SQL syntax.We can create and modify tables using migrations.
 
 With the help of laravel database migrations, we can also implement version control for our database schema if we have a team of multiple developers working on same project.

@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [javascript, typescript, nodejs, express, docker]
 ---
 
-# Running a NodeJS app with Typescript and ExpressJS in Docker Container
 In this blog post, I will walk you through the simplest way of setting up a nodejs application with expressjs and typescript to run inside a docker container. Git repository for this post is available [here](https://github.com/zohaib-shah/express-ts-docker-starter" target="_blank" rel="noreferrer noopener nofollow).
 
 

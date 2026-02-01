@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [nodejs, express, sequelize]
 ---
 
-# How to use Sequelize with Node and Express
 If you are willing to use MySQL with your Node App, this guide will show you how to use Sequelize with Node and Express.
 
 

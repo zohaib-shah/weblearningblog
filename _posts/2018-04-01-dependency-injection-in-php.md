@@ -6,7 +6,6 @@ categories: [PHP]
 tags: [php]
 ---
 
-# Dependency Injection in PHP
 Dependency injection in PHP is a handy technique to keep the code maintainable and re-usable. While coding our PHP classes, we often come to a situation where one class depends on data from another class or a class is dependent on data which is supposed to vary from object to object.
 
 

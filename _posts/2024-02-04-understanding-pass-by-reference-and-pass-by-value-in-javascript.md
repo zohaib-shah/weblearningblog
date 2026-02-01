@@ -6,7 +6,6 @@ categories: [JavaScript]
 tags: [javascript]
 ---
 
-# Understanding pass by reference and pass by value in Javascript
 A variable with primitive data type is passed by value in javascript. All non-primitive data types such as arrays and objects are passed by reference in javascript.
 
 

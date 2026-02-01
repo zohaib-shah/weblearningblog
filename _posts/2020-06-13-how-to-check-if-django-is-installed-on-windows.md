@@ -6,7 +6,6 @@ categories: [Django]
 tags: [django, python]
 ---
 
-# How to check if Django is installed on Windows
 Django is a popular web framework based on Python. If  you have installed it on your windows machine, either you have done it on core Python installation or on a Python virtual environment.
 
 

@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [javascript, nodejs, mysql, sequelize]
 ---
 
-# Seeding data in MySQL table using Sequelize and faker.js in NodeJS
 In this guide, We will learn about seeding data in MySQL table using Sequelize ORM and faker.js. Seeding a table simply means adding fake data in the database for testing and demonstration purposes.
 
 

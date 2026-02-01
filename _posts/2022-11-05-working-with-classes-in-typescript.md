@@ -6,7 +6,6 @@ categories: [TypeScript]
 tags: [typescript]
 ---
 
-# Working with classes in typescript
 Working with classes in typescript is essential to write readable and reusable code. In this short article, we will understand classes in typescript in simplest way possible.
 
 

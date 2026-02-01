@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [javascript, express, sequelize]
 ---
 
-# Simple Login and Registration with ExpressJS, Sequelize, bcrypt and JWT
 In this guide, we will see how a NodeJS and MySQL web application can incorporate user registration and login feature. We will use bcrypt to hash the password and JWT for token generation.
 
 

@@ -6,7 +6,6 @@ categories: [Django]
 tags: [django, python, mysql, database]
 ---
 
-# Connecting Django App with MySql database on Windows
 Connecting Django app with MySQL database on Windows is the basic step in building a MySQL based website in Django. In this post, we will see how we can connect mysql database with Django.
 
 

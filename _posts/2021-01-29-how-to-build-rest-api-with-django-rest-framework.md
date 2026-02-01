@@ -6,7 +6,6 @@ categories: [Django]
 tags: [django, python]
 ---
 
-# How to build REST API with Django REST Framework
 Django is a complete web application framework written in Python. We can use it to build any kind of web application. Building REST API with Django REST Framework is required for almost all Django based web applications.
 
 

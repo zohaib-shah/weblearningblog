@@ -6,7 +6,6 @@ categories: [Django]
 tags: [django, python]
 ---
 
-# First Steps with Django Project
 First steps with django project includes setting up superuser, getting your admin site running and create necessary apps.
 
 

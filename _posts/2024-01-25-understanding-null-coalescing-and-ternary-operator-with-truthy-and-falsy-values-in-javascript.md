@@ -6,7 +6,6 @@ categories: [JavaScript]
 tags: [javascript]
 ---
 
-# Understanding null coalescing and ternary operator with truthy and falsy values in Javascript
 Understanding how javascript evaluates different values as truthy or falsy is an essential need in day to day coding. Truthy and falsy values in javascript are used in if blocks, ternary and OR (||) operators and null coalescing (??) operator.
 
 

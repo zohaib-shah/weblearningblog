@@ -6,7 +6,6 @@ categories: [AngularJS]
 tags: [javascript, angular]
 ---
 
-# AngularJS ng-repeat
 AngularJS ng-repeat is a useful concept in any of the AngularJS based app. AngularJS ng-repeat directive is used to iterate through a JSON and build HTML accordingly. Filters in AngularJS can be useful if we want to filter the rendered HTML as per our needs.
 
 

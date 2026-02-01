@@ -6,7 +6,6 @@ categories: [Laravel]
 tags: [laravel]
 ---
 
-# How to install Laravel with NGINX on Ubuntu
 Laravel is the most popular PHP MVC framework.  If you have chosen a VPS or cloud hosting to deploy your laravel website, this post will help you install Laravel with NGINX on Ubuntu.
 
 

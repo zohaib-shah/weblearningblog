@@ -6,8 +6,6 @@ categories: [PHP]
 tags: [php, string-functions, web-development]
 ---
 
-# Important String Functions in PHP
-
 Some functions are very common and we use them frequently in our projects. No matter which CMS or Framework we are using but as long as they are based on PHP we can utilize these PHP functions to perform some basic tasks.
 
 ## implode() in PHP

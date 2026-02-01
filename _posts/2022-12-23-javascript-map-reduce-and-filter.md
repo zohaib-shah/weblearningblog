@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [javascript]
 ---
 
-# Javascript map, reduce and filter
 Javascript map, reduce and filter functions are some of the useful array functions in javascript. These are the higher order functions which takes a callback function as their parameter.
 
 

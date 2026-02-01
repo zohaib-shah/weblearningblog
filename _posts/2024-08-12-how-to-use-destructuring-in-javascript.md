@@ -6,7 +6,6 @@ categories: [JavaScript]
 tags: [javascript]
 ---
 
-# How to use destructuring in Javascript
 Destructuring in javascript is a syntax enhancement. It enables us to extract properties from object and create a dedicated variable for them. In this post, we will learn how to use destructuring in javascript to make the code more readable and concise.
 
 

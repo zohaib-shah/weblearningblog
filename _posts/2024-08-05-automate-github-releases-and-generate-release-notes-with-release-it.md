@@ -6,7 +6,6 @@ categories: [CI-CD]
 tags: [github]
 ---
 
-# Automate GitHub releases and generate release notes with release-it
 A release in a software ecosystem is a way to package and version software at a specific point in time. GitHub releases are an efficient and standard way of packaging and distributing software.
 
 

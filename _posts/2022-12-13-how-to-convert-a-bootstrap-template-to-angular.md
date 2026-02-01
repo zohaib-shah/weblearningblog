@@ -6,7 +6,6 @@ categories: [Angular]
 tags: [angular]
 ---
 
-# How to convert a bootstrap template to Angular
 In this post, we will learn how to convert any bootstrap template to angular. "Clean Blog" on startbootstrap.com seems to be a good choice as long as we are keen to understand the process of converting a bootstrap template to angular. We can download the template from [this](https://startbootstrap.com/theme/clean-blog" target="_blank" rel="noopener) link.
 
 

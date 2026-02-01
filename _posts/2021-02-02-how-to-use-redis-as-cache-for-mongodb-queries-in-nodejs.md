@@ -6,7 +6,6 @@ categories: [NodeJS]
 tags: [javascript, nodejs, database, redis, mongodb]
 ---
 
-# How to use Redis as Cache for MongoDB queries in NodeJS
 Using Redis as a cache for MongoDB queries in NodeJS can make your application super fast. The reason for faster access is due to the fact that Redis stores data in memory while MongoDB stores data in disk.
 
 

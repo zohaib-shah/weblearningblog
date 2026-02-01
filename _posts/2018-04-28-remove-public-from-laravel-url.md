@@ -6,7 +6,6 @@ categories: [Laravel]
 tags: [laravel]
 ---
 
-# Remove public from Laravel URL
 By default, We browse laravel application by appending **public** on URL. If you are using shared hosting environment, sometimes it is difficult to configure your hosting server to point to the public directory. In such cases, it is necessary to remove public from laravel URL.
 
 There are multiple ways to remove public from laravel URL. In this post, we will follow the procedure which involves modifying directory structure and change few paths in index.php file.

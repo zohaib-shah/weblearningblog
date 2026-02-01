@@ -6,7 +6,6 @@ categories: [PHP]
 tags: [php]
 ---
 
-# Learn OOP in PHP
 If you want to learn OOP in PHP then it is a good step towards making yourself an expert PHP developer. In this post, I will be focusing on basic concepts of OOP in PHP with a little bit of code.
 
 

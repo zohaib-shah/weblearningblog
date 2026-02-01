@@ -6,7 +6,6 @@ categories: [PHP]
 tags: [php]
 ---
 
-# Inheritance in PHP
 Inheritance in PHP is useful when we need to create classes with some common, while few contrasting behaviors. In such case, we create a parent class for shared characteristics and child classes for distinct ones.
 
 We discussed inheritance in our ["Learn OOP in PHP"](http://weblearningblog.com/php/learn-oop-php/) post, we should extend our code from example given there.

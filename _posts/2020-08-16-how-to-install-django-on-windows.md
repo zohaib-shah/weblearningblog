@@ -6,7 +6,6 @@ categories: [Django]
 tags: [django, python]
 ---
 
-# How to Install Django on Windows
 Installing Django on windows is a fairly simple process. Django is web framework which uses Python as it's programming language.
 
 
